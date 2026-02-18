@@ -9,7 +9,7 @@ De forma geral, foram aplicados conceitos como:
 -Utilização de ciclos 'for';<br>
 -Retorno de valores booleanos (True ou False), quer através de uma variável auxiliar (res), quer com retorno direto quando não havia necessidade de continuar a execução, tornando a função mais eficiente.
 
-Um dos aspetos mais relevantes deste trabalho foi a implementação da função da pergunta 9, anagrama(), que verifica se duas strings são anagramas. A lógica que utilizada consistiu em percorrer cada letra da primeira string e removê-la da segunda string utilizando:
+Um dos aspetos mais relevantes deste trabalho foi a implementação da função da pergunta 9, anagrama(), que verifica se duas strings são anagramas. A lógica utilizada consistiu em percorrer cada letra da primeira string e removê-la da segunda string utilizando:
 
 ```
 s2 = s2.replace(letra, "", 1)
