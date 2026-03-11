@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #fcfaf9;
+    color: #333;
+}
+
+/* Menu */
+.navbar {
+    background-color: #5c3b38; /* Terracota escuro */
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar li { margin: 0 20px; }
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffd6d0;
+}
+
+/* Secção Principal (Hero) - Agora em tons de Terracota */
+.hero {
+    /* Gradiente suave que vai do terracota escuro para um tom ligeiramente mais quente */
+    background: linear-gradient(135deg, #815753 0%, #7a4f4a 100%);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    /* Substituí o azul claro por um tom de creme/pêssego que combina com o terracota */
+    border-bottom: 3px solid #eecaca; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+/* Estatísticas */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 30px;
+}
+
+.stat-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+    border-bottom: 5px solid #5c3b38;
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transição suave de cores */
+}
+
+.stat-box h2 { color: #5c3b38; font-size: 2.5rem; }
+.stat-box:hover b {
+    color: white; /* Título h2 e tags <b> também ficam brancos */
+}
+
+.stat-box:hover h2 {
+    color: white; /* Título h2 e tags <b> também ficam brancos */
+}
+
+
+.stat-box:hover {
+    background-color: #5c3b38; /* Fundo muda para Terracota */
+    color: white; /* Texto geral muda para branco */
+}
+
+/* Content Section */
+.content-section {
+    padding: 60px 100px;
+    background-color: #fcfaf9; /* Cor de fundo suave que já tinhas */
+}
+
+.container {
+    max-width: 800px; /* Impede que o texto fique demasiado largo e difícil de ler */
+    margin: 0 auto;   /* Centraliza a caixa no meio da página */
+    text-align: center; /* Centraliza o texto para um ar mais editorial */
+}
+
+.container h2 {
+    color: #5c3b38;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.container p {
+    font-size: 1.15rem;
+    line-height: 1.8; /* Aumenta o espaço entre linhas para facilitar a leitura */
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-align: justify; /* Opcional: deixa as bordas do texto alinhadas */
+}
+
+.image-container {
+    margin: 30px 0; /* Espaço entre o texto e a imagem */
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 70%;  /* Garante que a imagem nunca saia da tela */
+    height: auto;     /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Bordas arredondadas para combinar com as tuas caixas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra elegante */
+}
+
+.mulher-card {
+    display: flex; /* Coloca imagem e texto lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 30px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.mulher-img {
+    width: 150px; /* Tamanho fixo da imagem */
+    height: 150px;
+    object-fit: cover; /* Garante que a imagem não fica distorcida */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    border: 3px solid #5c3b38; /* Borda no teu tom terracota */
+}
+
+.texto-mulher {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+/* Responsividade: em telemóveis, a imagem passa para cima do texto */
+@media (max-width: 768px) {
+    .mulher-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+#hoje strong {
+    color: #5c3b38; /* Apenas o negrito ganha destaque, nada mais */
+}
