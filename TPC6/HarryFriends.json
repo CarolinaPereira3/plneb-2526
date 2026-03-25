@@ -1,0 +1,14 @@
+{
+    "Harry Potter": {
+        "Hermione Granger": 81,
+        "Rony Weasley": 144
+    },
+    "Rony Weasley": {
+        "Harry Potter": 145,
+        "Hermione Granger": 73
+    },
+    "Hermione Granger": {
+        "Harry Potter": 82,
+        "Rony Weasley": 73
+    }
+}
