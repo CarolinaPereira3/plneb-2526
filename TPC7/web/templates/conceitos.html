@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}  <!--filho de layout -->
+
+
+{% block head%}
+    <title>Lista de conceitos</title>
+{% endblock %}
+
+
+{% block body%}
+
+<h1>Lista de conceitos </h1>
+
+    <div class="list-group">
+        {% for conceito in conceitos%}
+            <a href="/conceitos/{{conceito}}" class="list-group-item list-group-item-action">{{conceito}}</a>
+        {% endfor %}
+    </div>
+
+    
+
+{% endblock %}
