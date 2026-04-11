@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}  <!--filho de layout -->
+
+
+{% block head%}
+    <title>{{designacao}}</title>
+{% endblock %}
+
+
+{% block body%}
+
+<b>{{designacao}}:</b> {{descricao}}
+<div class="pt-5">
+<a href="/conceitos" type="button" class="btn btn-primary">Voltar</a>
+<button type="button" class="btn btn-danger" onclick="apagar_conceito('{{designacao}}')">Apagar</button> <!-- ao clicar vai executar a funcao-->
+
+</div>
+
+    
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}  
+
+{% block head%}
+    <title>Pesquisar termo</title>
+{% endblock %}
+
+
+{% block body%}
+
+<h1>Pesquisar no dicionário médico</h1>
+<form action="/pesquisar" method="POST">
+  <div class="mb-3">
+    <label for="termo" class="form-label">Termo que deseja pesquisar:</label>
+    <input type="text" class="form-control" id="termo" name="termo">
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="caseSensitive" name="caseSensitive">
+    <label class="form-check-label" for="caseSensitive">Case Sensitive</label>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="wordBoundary" name="wordBoundary">
+    <label class="form-check-label" for="wordBoundary">Word Boundary</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Pesquisar</button>
+</form>
+
+  <h1>Resultados</h1>
+{% for resultado in res %}
+  <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px;">
+    {{ resultado | safe}} <!--safe permite que o <b> passe, permite executar em html, flask impede que isso acontecesse sem o safe-->
+  </div>
+{% endfor %}
+
+{% endblock %}
