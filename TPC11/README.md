@@ -10,3 +10,23 @@ Posteriormente, foi construído o vetor TF-IDF da *query*. Este vetor é obtido 
 Após isso, foi implementada a função de similaridade do cosseno, que permite medir a proximidade entre dois vetores (*query* e documento). Esta métrica é calculada através do produto interno entre os vetores, dividido pelo produto das suas normas, permitindo obter um valor entre 0 e 1 que representa o grau de similaridade entre eles.
 
 Por fim, foi criada a função de ranking, que calcula a similaridade entre a *query* e cada documento da coleção. Os resultados são ordenados de forma decrescente, devolvendo assim os documentos mais relevantes para a *query*, juntamente com o respetivo *score* de similaridade.
+
+A *query* utilizada foi:
+
+"The bright sun"
+
+A coleção de documentos utilizada foi:
+
+- "The sky is blue"
+
+- "The sun is bright"
+
+- "The sun in the sky"
+
+Deste modo, o resultado do *ranking* obtido foi:
+
+```
+[(1, 1.0), (2, 0.24482975009584626), (0, 0.0)]
+```
+
+Sendo assim, o segundo documento é o mais similar à *query*, seguido do terceiro documento e, por último, o primeiro documento, que apresenta um score de similaridade de 0, ou seja, não possui qualquer relação relevante com a query considerada.
